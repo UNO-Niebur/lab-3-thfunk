@@ -1,7 +1,7 @@
 #ApproxPi.py
-#Name:
-#Date:
-#Assignment:
+#Name: Taran Funk
+#Date: 01/03/2026
+#Assignment: Lab 3 - Approximate Pi
 import math
 import time
 
