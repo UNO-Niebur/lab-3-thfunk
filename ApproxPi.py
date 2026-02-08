@@ -12,15 +12,21 @@ def main():
   realPi = math.pi
 
   #ask user for decimal percision (up to 10)
-
+  print("To how many decimal places would you like our approximation of pi to be accurate to?")
+  decimal = int(input("Choose a number from 1 - 10:"))
+  
   start = time.time()
-  #calculate pi using the approximation technique
+  approxPi = 4
+  count = 1
   #Loop until the level of percision is reached
-
+  while abs(round(realPi,decimal) - round(approxPi,decimal))>0:
+    approxPi = approxPi + ((-1)**count)*(4/(1 + 2*(count)))
+    count += 1
   end = time.time()
 
   elapsedTime = end - start
-  print(elapsedTime)
+  print("It took ",elapsedTime, " seconds to find this approximation:", round(approxPi,decimal))
+  
 
 if __name__ == '__main__':
   main()
